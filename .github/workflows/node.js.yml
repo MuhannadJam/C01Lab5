@@ -27,9 +27,9 @@
                 with:
                   node-version: ${{ matrix.node-version }}
               - run: npm i
-              - run: mkdir data
-              - run: mkdir data/db
-              - run: mongod --dbpath=./data/db
+              - run: sudo apt-get update
+              - run: sudo apt-get install -y mongodb
+              - run: sudo service mongodb start
               - run: npm run dev
               - run: npm test
             
