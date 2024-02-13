@@ -35,6 +35,6 @@
               - run: sudo systemctl daemon-reload
               - run: sudo systemctl start mongod
               - run: sudo systemctl enable mongod
-              - run: npm run dev
+              - run: npm run dev &
               - run: npm test
             
